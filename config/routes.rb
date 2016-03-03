@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :caloric_intakes
   resources :consumed_calories
   resources :performed_exercises
   # The priority is based upon order of creation: first created -> highest priority.

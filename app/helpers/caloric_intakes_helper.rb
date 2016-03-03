@@ -1,0 +1,2 @@
+module CaloricIntakesHelper
+end
