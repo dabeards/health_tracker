@@ -1,17 +1,4 @@
 Rails.application.routes.draw do
-  get 'weights/index'
-
-  get 'weights/show'
-
-  get 'weights/new'
-
-  get 'weights/edit'
-
-  get 'weights/create'
-
-  get 'weights/update'
-
-  get 'weights/destroy'
 
   resources :caloric_intakes
   resources :performed_exercises

@@ -1,2 +1,14 @@
-<h1>Weights#show</h1>
-<p>Find me in app/views/weights/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Weights:</strong>
+  <%= @weight.burned_calories %>
+</p>
+
+<p>
+  <strong>Exercise date:</strong>
+  <%= @weight.exercise_date %>
+</p>
+
+<%= link_to 'Edit', edit_weight_path(@weight) %> |
+<%= link_to 'Back', weights_path %>
