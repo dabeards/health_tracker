@@ -1,0 +1,25 @@
+<%= form_for(@caloric_intake) do |f| %>
+  <% if @caloric_intake.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weight.errors.count, "error") %> prohibited this caloric_intake from being saved:</h2>
+
+      <ul>
+      <% @caloric_intake.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :weight_date %><br>
+    <%= f.datetime_select :weight_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
