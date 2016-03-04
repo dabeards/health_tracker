@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'taken_steps/index'
+
+  get 'taken_steps/show'
+
+  get 'taken_steps/new'
+
+  get 'taken_steps/edit'
+
+  get 'taken_steps/create'
+
+  get 'taken_steps/update'
+
+  get 'taken_steps/destroy'
+
   resources :caloric_intakes
   resources :performed_exercises
   resources :taken_steps

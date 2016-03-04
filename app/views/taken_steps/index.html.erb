@@ -1,27 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Taken Steps</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Step date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @performed_exercises.each do |performed_exercise| %>
-      <tr>
-        <td><%= taken_step.step_date %></td>
-        <td><%= link_to 'Show', taken_step %></td>
-        <td><%= link_to 'Edit', edit_taken_step_path(taken_step) %></td>
-        <td><%= link_to 'Destroy', taken_step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Taken Step', new_taken_step_path %>
+<h1>TakenSteps#index</h1>
+<p>Find me in app/views/taken_steps/index.html.erb</p>
