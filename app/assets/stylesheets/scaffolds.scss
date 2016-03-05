@@ -1,14 +1,15 @@
 body {
-  @include outer-container;
-  background-color: #fff;
-  color: #333;
+  background-color: #fef1e0;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
+  font-color: #ED1B24;
   line-height: 18px;
 }
-.formbody {
-  @include span-columns(60);
+.formdiv {
+  background-color: #fef1e0;
   position: center;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
 }
 p, ol, ul, td {
@@ -17,10 +18,9 @@ p, ol, ul, td {
   line-height: 18px;
 }
 .blocks {
-  @include span-columns(6);
 }
 pre {
-  background-color: #eee;
+  background-color: #fef1e0;
   padding: 10px;
   font-size: 11px;
 }
@@ -34,7 +34,7 @@ a {
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #fef1e0;
   }
 }
 
@@ -60,7 +60,7 @@ div {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #fef1e0;
 
   h2 {
     text-align: left;
