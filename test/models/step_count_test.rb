@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TakenStepTest < ActiveSupport::TestCase
+class StepCountTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
