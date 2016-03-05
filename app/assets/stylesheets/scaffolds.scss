@@ -1,21 +1,40 @@
+@import "bourbon";
+@import "neat";
+
 body {
-  background-color: #fff;
-  color: #333;
+  @include outer-container;
+  background-color: #fef1e0;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding: 0;
+  margin: 5% 35% 20%;
 }
-
+.formdiv {
+  @include span-columns(6);
+  @include shift(3);
+  column-align: center;
+  background-color: #fef1e0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 0;
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-}
 
+  font-color: #ED1B24;
+}
+.blocks {
+}
 pre {
-  background-color: #eee;
+  background-color: #fef1e0;
   padding: 10px;
   font-size: 11px;
+
+  font-color: #ED1B24;
 }
 
 a {
@@ -27,7 +46,7 @@ a {
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #fef1e0;
   }
 }
 
@@ -53,13 +72,14 @@ div {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #fef1e0;
 
   h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
+    font-color: #ED1B24;
     margin: -7px;
     margin-bottom: 0px;
     background-color: #c00;
@@ -68,6 +88,8 @@ div {
 
   ul li {
     font-size: 12px;
+
+    font-color: #ED1B24;
     list-style: square;
   }
 }
