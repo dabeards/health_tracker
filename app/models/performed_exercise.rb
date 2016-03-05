@@ -6,6 +6,6 @@ class PerformedExercise < ActiveRecord::Base
   end
 
   def self.net_calories_of_the_day
-  (CaloricIntakes.consumed_calories) - burned_calories
+  (CaloricIntake.consumed_calories) - burned_calories
   end
 end
