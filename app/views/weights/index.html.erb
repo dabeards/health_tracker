@@ -14,8 +14,8 @@
   <tbody class="blocks">
     <% @weights.each do |weight| %>
       <tr>
-        <td><%= weight.burned_calories %></td>
-        <td><%= weight.exercise_date %></td>
+        <td><%= weight.weight %></td>
+        <td><%= weight.weight_date %></td>
         <td><%= link_to 'Show', weight %></td>
         <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
         <td><%= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>

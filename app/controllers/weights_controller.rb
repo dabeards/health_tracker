@@ -11,7 +11,7 @@ class WeightsController < ApplicationController
   end
 
   def new
-    @weights = Weight.new
+    @weight = Weight.new
   end
 
   def edit
@@ -21,8 +21,8 @@ class WeightsController < ApplicationController
     @weight = Weight.new(weight_params)
 
     respond_to do |format|
-      if @caloric_intake.save
-        format.html { redirect_to @caloric_intake, notice: 'Caloric intake was successfully created.' }
+      if @weight.save
+        format.html { redirect_to @weight, notice: 'Weight was successfully created.' }
         format.json { render :show, status: :created, location: @weight }
       else
         format.html { render :new }
@@ -44,5 +44,21 @@ class WeightsController < ApplicationController
   end
 
   def destroy
+    @weight.destroy
+    respond_to do |format|
+      format.html { redirect_to weights_url, notice: 'Weight was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_weight
+      @weight = Weight.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def weight_params
+      params.require(:weight).permit(:weight, :weight_date)
+    end
 end
