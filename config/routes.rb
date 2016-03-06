@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'dashboards/show'
+
   resources :caloric_intakes
   resources :performed_exercises
   resources :step_counts

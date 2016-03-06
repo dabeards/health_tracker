@@ -1,25 +1,29 @@
-<%= form_for(@caloric_intake) do |f| %>
-  <% if @caloric_intake.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@caloric_intake.errors.count, "error") %> prohibited this caloric_intake from being saved:</h2>
+<div class="bigformdiv">
+  <div class="formdiv">
+    <%= form_for(@caloric_intake) do |f| %>
+      <% if @caloric_intake.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@caloric_intake.errors.count, "error") %> prohibited this caloric_intake from being saved:</h2>
 
-      <ul>
-      <% @caloric_intake.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @caloric_intake.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :consumed_calories %><br>
-    <%= f.text_field :consumed_calories %>
+      <div class="field">
+        <%= f.label :consumed_calories %><br>
+        <%= f.text_field :consumed_calories %>
+      </div>
+      <div class="field">
+        <%= f.label :calories_date %><br>
+        <%= f.datetime_select :calories_date %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :calories_date %><br>
-    <%= f.datetime_select :calories_date %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

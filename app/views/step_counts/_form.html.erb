@@ -1,25 +1,29 @@
-<%= form_for(@step_count) do |f| %>
-  <% if @step_count.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@step_count.errors.count, "error") %> prohibited this step_count from being saved:</h2>
+<div class="bigformdiv">
+    <div class="formdiv">
+      <%= form_for(@step_count) do |f| %>
+        <% if @step_count.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@step_count.errors.count, "error") %> prohibited this step_count from being saved:</h2>
 
-      <ul>
-      <% @step_count.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+            <ul>
+            <% @step_count.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :steps_taken %><br>
+          <%= f.text_field :steps_taken %>
+        </div>
+        <div class="field">
+          <%= f.label :steps_date %><br>
+          <%= f.datetime_select :steps_date %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :steps_taken %><br>
-    <%= f.text_field :steps_taken %>
-  </div>
-  <div class="field">
-    <%= f.label :steps_date %><br>
-    <%= f.datetime_select :steps_date %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
