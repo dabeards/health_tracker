@@ -1,2 +1,15 @@
-<h1>Dashboards#show</h1>
-<p>Find me in app/views/dashboards/show.html.erb</p>
+<div class="dashboardbody">
+  <h1 class="header">Health Tracker Dashboard</h1>
+  <div class="dashboard">
+    <%= link_to 'Weights', weights_path %>
+  </div>
+  <div class="dashboard">
+    <%= link_to 'Step Count', step_counts_path %>
+  </div>
+  <div class="dashboard">
+    <%= link_to 'Performed Exercises', performed_exercises_path %>
+  </div>
+  <div class="dashboard">
+    <%= link_to 'Caloric Intakes', caloric_intakes_path %>
+  </div>
+</div>

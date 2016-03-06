@@ -11,6 +11,12 @@ body {
   margin: 5% 35% 20%;
   color: #3D2211;
 }
+.dashboardbody {
+  @include outer-container;
+  width: 300%;
+  margin-left: -65%;
+  margin-right: auto;
+}
 .formdiv {
   @include span-columns(6);
   @include shift(3);
@@ -21,7 +27,17 @@ body {
   display: block;
   padding: 0;
 }
-
+.dashboard {
+  @include span-columns(1);
+  @include shift(4);
+  background-color: #F3D3AA;
+  width: 200px;
+  height: 100px;
+  display: block;
+  text-align: center;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -30,9 +46,10 @@ p, ol, ul, td {
 }
 .header {
   color: #ED1B24;
+  text-align: center;
+  margin-left: -20%;
 }
-.blocks {
-}
+
 pre {
   background-color: #fef1e0;
   padding: 10px;
