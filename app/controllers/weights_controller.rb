@@ -1,8 +1,6 @@
 class WeightsController < ApplicationController
   before_action :set_weight, only: [:show, :edit, :update, :destroy]
 
-
-
   def index
     @weights = Weight.all
   end
