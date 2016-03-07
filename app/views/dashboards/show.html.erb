@@ -2,6 +2,8 @@
   <h1 class="header">Health Tracker Dashboard</h1>
   <div class="dashboard">
     <%= link_to 'Weight Lists', weights_path %>
+    <p> Last weight entered: </p>
+    <%= Weight.last_weight_entered %>
   </div>
   <div class="dashboard">
     <%= link_to 'Step Count List', step_counts_path %>
@@ -15,7 +17,7 @@
   </div>
   <div class="dashboard">
     <%= link_to 'Caloric Intakes List', caloric_intakes_path %>
-    <p> Total calories consumed today:</p>
+    <p> Total number of calories consumed today:</p>
     <%= PerformedExercise.net_calories_of_the_day %>
   </div>
 </div>
