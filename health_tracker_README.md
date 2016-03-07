@@ -13,3 +13,6 @@ Finally this app is the first app we uploaded to heroku to be hosted live on the
 ##The Details
 We use scaffold to generate the models, views, and controllers for caloric intake and for performed exercises.
 We hand-built everything for step count and weight and exercise types.
+
+The link for the app is located at:
+(https://cryptic-lowlands-84789.herokuapp.com/)
