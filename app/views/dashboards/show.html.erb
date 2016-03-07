@@ -1,18 +1,20 @@
 <div class="dashboardbody">
   <h1 class="header">Health Tracker Dashboard</h1>
   <div class="dashboard">
-    <%= link_to 'Weights', weights_path %>
+    <%= link_to 'Weight Lists', weights_path %>
   </div>
   <div class="dashboard">
-    <%= link_to 'Step Count', step_counts_path %>
-    <p> Total steps taken today:</p>
+    <%= link_to 'Step Count List', step_counts_path %>
+    <p> Total number of steps taken today:</p>
     <%= StepCount.total_steps_taken_today %>
   </div>
   <div class="dashboard">
-    <%= link_to 'Performed Exercises', performed_exercises_path %>
+    <%= link_to 'Performed Exercises List', performed_exercises_path %>
+    <p> Exercise count for the day: </p>
+    <%= PerformedExercise.exercise_count_for_today %>
   </div>
   <div class="dashboard">
-    <%= link_to 'Caloric Intakes', caloric_intakes_path %>
+    <%= link_to 'Caloric Intakes List', caloric_intakes_path %>
     <p> Total calories consumed today:</p>
     <%= PerformedExercise.net_calories_of_the_day %>
   </div>

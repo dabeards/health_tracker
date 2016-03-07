@@ -10,4 +10,10 @@ class PerformedExercise < ActiveRecord::Base
   def self.net_calories_of_the_day
      ((CaloricIntake.consumed_calories) - PerformedExercise.burned_calories)
   end
+
+  def self.exercise_count_for_today
+    if where(['created_at > ?', DateTime.now.beginning_of_day]).exists?
+      where(['created_at > ?', DateTime.now.beginning_of_day]).count(:exercise_name)
+    end
+  end
 end
