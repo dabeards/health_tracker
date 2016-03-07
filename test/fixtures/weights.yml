@@ -10,4 +10,4 @@ one:
 
 two:
   weight: 9.99
-  weight_date: 2016-03-03 17:17:31
+  weight_date: DateTime.now

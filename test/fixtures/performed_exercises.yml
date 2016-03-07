@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  exercise_name: abs
   burned_calories: 9.99
-  exercise_date: 2016-03-03 17:17:31
+  exercise_date: DateTime.now
 
 two:
+  exercise_name: chest
   burned_calories: 9.99
-  exercise_date: 2016-03-03 17:17:31
+  exercise_date: DateTime.now
