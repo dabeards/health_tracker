@@ -19,10 +19,10 @@ ExerciseType.create([
 # yoga = ExerciseType.create!(exercise_type_name: "Hot Yoga", created_at: "2016-03-02 15:15:00")
 # basketball = ExerciseType.create!(exercise_type_name: "Basketball", created_at: "2016-03-01 13:12:11")
 # swimming = ExerciseType.create!(exercise_type_name: "Swimming", created_at: "2016-02-29 12:11:10")
-100.times do
+100.times do |n|
   # ExerciseType.create!(exercise_type_name: rand(6)+1, exercise_date: DateTime.now - (rand * 21))
   StepCount.create!(steps_taken: rand(3000), steps_date: DateTime.now - (rand * 21))
   PerformedExercise.create!(burned_calories: rand(900), exercise_date: DateTime.now - (rand * 21))
-  Weight.create!(weight: rand(300), weight_date: DateTime.now - (rand * 21))
+  Weight.create!(weight: rand(300), weight_date: (DateTime.now.to_date - (n)))
   CaloricIntake.create!(consumed_calories: rand(900), calories_date: DateTime.now - (rand * 21))
 end

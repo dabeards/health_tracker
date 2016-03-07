@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20160305212554) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.decimal  "weight",      precision: 5, scale: 2
-    t.datetime "weight_date"
+    t.date     "weight_date"
   end
 
 end
